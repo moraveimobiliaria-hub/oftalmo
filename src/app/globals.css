@@ -7,7 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -127,4 +127,15 @@
   html {
     @apply font-sans;
   }
+}
+/* ---- Identidade visual OftaStudy ---- */
+:root {
+  --navy: #0b2545; --navy-soft: #13315c; --sky: #8ecae6; --sky-soft: #e8f4fa; --aqua: #2ec4b6; --surface: #f3f6f9;
+  --act-aula: #2f6fed; --act-questoes: #2ec4b6; --act-revisao: #f2b705; --act-simulado: #8b5cf6; --act-descanso: #94a3b8;
+  --background: #f3f6f9; --primary: #0b2545; --primary-foreground: #ffffff; --ring: #2f6fed;
+}
+@theme inline {
+  --color-navy: var(--navy); --color-navy-soft: var(--navy-soft); --color-sky: var(--sky); --color-sky-soft: var(--sky-soft);
+  --color-aqua: var(--aqua); --color-surface: var(--surface); --color-act-aula: var(--act-aula); --color-act-questoes: var(--act-questoes);
+  --color-act-revisao: var(--act-revisao); --color-act-simulado: var(--act-simulado); --color-act-descanso: var(--act-descanso);
 }

@@ -4,6 +4,7 @@ Plataforma de estudos para a prova do CBO (2029). Meta: concluir o conteúdo at�
 
 ## Como abrir
 Dê **dois cliques em `OftaStudy.html`** (nesta pasta). Abre no navegador (Edge ou Chrome). Não precisa de internet, conta, nem programa instalado.
+**No celular ou iPad:** abra https://moraveimobiliaria-hub.github.io/oftalmo/ e, no menu do navegador, use "Adicionar à tela inicial". (Código no GitHub: moraveimobiliaria-hub/oftalmo, repositório público; seus dados nunca vão para lá.)
 Dica: clique com o botão direito no arquivo → *Enviar para → Área de trabalho (criar atalho)*.
 
 ## Onde ficam seus dados

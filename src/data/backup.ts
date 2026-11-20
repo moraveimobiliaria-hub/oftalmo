@@ -58,3 +58,14 @@ export function diasDesdeBackup(ultimo: string | null, hoje: Date): number | nul
   const dias = Math.floor((hoje.getTime() - new Date(ultimo).getTime()) / 86_400_000);
   return Math.max(0, dias);
 }
+
+/** Há algo que valha proteger com backup? (nome preenchido ou qualquer dado além das especialidades iniciais) */
+export async function temDadosParaProteger(): Promise<boolean> {
+  const perfil = await db.profile.get(1);
+  if (perfil && perfil.nome !== "") return true;
+  const contagens = await Promise.all([
+    db.subjects.count(), db.lessons.count(), db.lessonProgress.count(),
+    db.questions.count(), db.attempts.count(), db.studySessions.count(),
+  ]);
+  return contagens.some((n) => n > 0);
+}

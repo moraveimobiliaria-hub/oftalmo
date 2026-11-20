@@ -136,7 +136,7 @@
 
 ### Task 8: Fechamento da Fase 1
 
-**Files:** Create: `LEIA-ME.md`; Modify: `docs/contas.md` (GitHub e Vercel, para depois da aprovação); `C:\Users\morav\Desktop\Projetos Claude\Setup\projetos.md`
+**Files:** Create: `LEIA-ME.md`; Modify: `docs/contas.md` (GitHub e Vercel, para depois da aprovação); `Setup\projetos.md` (fora do repositório)
 
 - [ ] **Step 1:** Rodar `npm test`, testes RLS, `npm run test:e2e` (desktop + celular) e `npm run build`; todos devem passar. Registrar no relatório final o que não foi testado (ex.: produção na Vercel, pausa do Supabase).
 - [ ] **Step 2:** `LEIA-ME.md` em português simples: como abrir (clique duplo no .bat), como entrar, o que existe e o que vem nas fases.

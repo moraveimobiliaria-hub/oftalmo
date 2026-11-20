@@ -112,7 +112,7 @@
 
 ### Task 8: Fechamento
 
-**Files:** Create: `LEIA-ME.md`; Modify: `C:\Users\morav\Desktop\Projetos Claude\Setup\projetos.md`
+**Files:** Create: `LEIA-ME.md`; Modify: `Setup\projetos.md` (fora do repositório)
 
 - [ ] **Step 1:** Rodar `npm test`, `npm run build`, `npm run test:e2e` (desktop e celular); todos verdes. Listar no relatório o que não foi testado (iPad real, GitHub Pages, vídeo do Drive).
 - [ ] **Step 2:** `LEIA-ME.md` em português simples: como abrir o `OftaStudy.html`, como fazer e restaurar backup, o que vem em cada fase. Copiar `dist/index.html` para `OftaStudy.html` na raiz do projeto. Registrar o projeto em `Setup\projetos.md`.

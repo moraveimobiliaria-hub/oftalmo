@@ -1,7 +1,5 @@
-"use client";
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, useLocation } from "react-router";
 import { MoreHorizontal } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/nav";
 import { NAV_ICONS } from "./nav-icons";
@@ -9,7 +7,7 @@ import { NAV_ICONS } from "./nav-icons";
 const MAIN = ["inicio", "videoaulas", "banco-de-questoes", "revisoes"];
 
 export function BottomNav() {
-  const pathname = usePathname();
+  const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
   const main = NAV_ITEMS.filter((i) => MAIN.includes(i.slug));
   return (
@@ -22,18 +20,15 @@ export function BottomNav() {
               return (
                 <Link
                   key={item.slug}
-                  href={item.href}
+                  to={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex flex-col items-center gap-1 rounded-xl p-3 text-xs text-navy hover:bg-sky-soft"
+                  className="flex flex-col items-center gap-1 rounded-xl p-3 text-center text-xs text-navy hover:bg-sky-soft"
                 >
                   <Icon size={20} /> {item.label}
                 </Link>
               );
             })}
           </div>
-          <form action="/auth/signout" method="post" className="mt-2 text-center">
-            <button className="text-xs text-slate-500 underline">Sair</button>
-          </form>
         </div>
       )}
       <nav aria-label="Menu principal" className="fixed inset-x-0 bottom-0 z-50 flex h-16 items-center justify-around border-t bg-white">
@@ -43,7 +38,7 @@ export function BottomNav() {
           return (
             <Link
               key={item.slug}
-              href={item.href}
+              to={item.href}
               aria-current={active ? "page" : undefined}
               className={`flex flex-col items-center gap-0.5 text-[11px] ${active ? "font-medium text-act-aula" : "text-slate-500"}`}
             >

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --color-navy: #0b2545;
+  --color-navy-soft: #13315c;
+  --color-sky: #8ecae6;
+  --color-sky-soft: #e8f4fa;
+  --color-aqua: #2ec4b6;
+  --color-surface: #f3f6f9;
+  --color-act-aula: #2f6fed;
+  --color-act-questoes: #2ec4b6;
+  --color-act-revisao: #f2b705;
+  --color-act-simulado: #8b5cf6;
+  --color-act-descanso: #94a3b8;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-surface);
+  color: #0f172a;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}

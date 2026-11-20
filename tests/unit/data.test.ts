@@ -59,6 +59,14 @@ describe("perfil", () => {
     expect((await salvarPerfil({ provaMes: 6, provaAno: 2020 })).ok).toBe(false);
   });
 
+  it("recusa meta de cronograma vazia ou inválida (evita NaN no dashboard)", async () => {
+    await iniciarBanco();
+    expect((await salvarPerfil({ metaCronograma: "" })).ok).toBe(false);
+    expect((await salvarPerfil({ metaCronograma: "31/12/2027" })).ok).toBe(false);
+    expect((await salvarPerfil({ metaCronograma: "2027-02-31" })).ok).toBe(false);
+    expect((await salvarPerfil({ metaCronograma: "2028-06-30" })).ok).toBe(true);
+  });
+
   it("recusa nome só com espaços", async () => {
     await iniciarBanco();
     expect((await salvarPerfil({ nome: "   " })).ok).toBe(false);

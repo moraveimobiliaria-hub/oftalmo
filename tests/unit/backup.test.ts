@@ -50,6 +50,8 @@ describe("restaurar arquivo inválido não apaga nada", () => {
     ["versão desconhecida", { versao: 99, dados: {} }],
     ["tabela desconhecida", { versao: 1, dados: { profile: [], foo: [] } }],
     ["tabela ausente", { versao: 1, dados: { profile: [] } }],
+    ["sem a linha de perfil", { versao: 1, dados: tabelasVazias({ specialties: [{ nome: "Retina", ordem: 1 }] }) }],
+    ["perfil com campos inválidos", { versao: 1, dados: tabelasVazias({ profile: [{ id: 1, nome: 5, metaCronograma: "x" }] }) }],
     ["linha que não é objeto", { versao: 1, dados: tabelasVazias({ specialties: [1] }) }],
   ];
   for (const [nome, entrada] of casos) {

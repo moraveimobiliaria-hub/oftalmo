@@ -1,7 +1,7 @@
 import type { Table } from "dexie";
-import { db, TABELAS } from "./db";
+import { db, TABELAS, type Perfil } from "./db";
 import { iniciarBanco } from "./seed";
-import type { Resultado } from "./profile";
+import { validarPerfil, type Resultado } from "./profile";
 
 export type Backup = { versao: 1; geradoEm: string; dados: Record<string, unknown[]> };
 
@@ -30,6 +30,8 @@ function validar(json: unknown): string | null {
     if (!Array.isArray(linhas)) return "O backup está incompleto.";
     if (linhas.some((l) => typeof l !== "object" || l === null || Array.isArray(l))) return "O backup está corrompido.";
   }
+  const perfis = dados.profile as Perfil[];
+  if (perfis.length !== 1 || perfis[0].id !== 1 || validarPerfil(perfis[0]) !== null) return "O backup está corrompido (perfil inválido). Nada foi alterado.";
   return null;
 }
 

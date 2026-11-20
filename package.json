@@ -17,7 +17,6 @@
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "react-router": "^8.5.2",
-    "recharts": "^3.10.1",
     "vite": "^8.3.8",
     "vite-plugin-singlefile": "^2.3.4"
   },
@@ -26,7 +25,6 @@
     "@types/node": "^24.19.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "dotenv": "^18.0.10",
     "fake-indexeddb": "^6.2.8",
     "tailwindcss": "4.3.3",
     "typescript": "^5",
